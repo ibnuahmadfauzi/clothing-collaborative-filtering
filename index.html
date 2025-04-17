@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Aplikasi Prediksi Rating - Metode Collaborative Filtering - Jelita Arba
+      Sholeha
+    </title>
+
+    <!-- Include Bootstrap File -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Include CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="card border-0 mb-5">
+      <div class="card-body p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-4">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-normal" href="index.html">
+              Rekomendasi Produk Clothing
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Informasi
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="informasi/tentang-aplikasi.html"
+                        >Aplikasi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="informasi/tentang-peneliti.html"
+                        >Peneliti</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Tabel Rating -->
+    <h6 class="text-center bg-secondary rounded-2 text-light py-2">
+      Data Rating
+    </h6>
+    <div id="ratingTable" class="mb-5"></div>
+
+    <!-- Form Tambah Rating -->
+    <h6 class="text-center bg-secondary rounded-2 text-light py-2">
+      Tambah / Ubah Rating
+    </h6>
+    <form id="ratingForm" class="d-flex mb-5">
+      <input
+        type="text"
+        id="user"
+        placeholder="Nama User"
+        class="form-control form-control-sm"
+        required
+      />
+      <input
+        type="text"
+        id="item"
+        placeholder="Nama Item"
+        class="form-control form-control-sm"
+        required
+      />
+      <input
+        type="number"
+        id="rating"
+        placeholder="Rating (1-5)"
+        min="1"
+        max="5"
+        class="form-control form-control-sm"
+        required
+      />
+      <button type="submit" class="btn btn-secondary btn-sm">Proses</button>
+    </form>
+
+    <hr class="mb-5" />
+
+    <!-- Prediksi -->
+    <h6 class="text-center bg-secondary rounded-2 text-light py-2">
+      Prediksi Rating
+    </h6>
+    <div class="d-flex">
+      <select id="predictUser" class="form-select form-select-sm"></select>
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="predictItem"
+        placeholder="Nama Item"
+      />
+      <button onclick="predictRating()" class="btn btn-secondary btn-sm">
+        Prediksi
+      </button>
+    </div>
+    <div id="result"></div>
+
+    <!-- Include Bootstrap File -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Include JS File -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
