@@ -13,6 +13,17 @@
 
     <!-- Include CSS File -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Include Font Awesome -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/sharp-thin.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/duotone-thin.css" rel="stylesheet" />
+    <link
+      href="assets/fontawesome/css/sharp-duotone-thin.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-light">
     <div class="card border-0 mb-5">
@@ -20,7 +31,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-4">
           <div class="container-fluid">
             <a class="navbar-brand fw-normal" href="index.html">
-              Rekomendasi Produk Clothing
+              <i class="fa-solid fa-shirt me-2"></i> Rekomendasi Produk Clothing
             </a>
             <button
               class="navbar-toggler"
@@ -43,21 +54,26 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Informasi
+                    <i class="fa-solid fa-circle-info me-1"></i> Informasi
                   </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a
                         class="dropdown-item"
                         href="informasi/tentang-aplikasi.html"
-                        >Aplikasi</a
+                        ><i
+                          class="fa-brands fa-google-play"
+                          style="width: 20px"
+                        ></i>
+                        Aplikasi</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
                         href="informasi/tentang-peneliti.html"
-                        >Peneliti</a
+                        ><i class="fa-solid fa-user" style="width: 20px"></i>
+                        Peneliti</a
                       >
                     </li>
                   </ul>
@@ -71,13 +87,13 @@
 
     <!-- Tabel Rating -->
     <h6 class="text-center bg-secondary rounded-2 text-light py-2">
-      Data Rating
+      <i class="fa-solid fa-star-half-stroke me-2"></i> Data Rating
     </h6>
     <div id="ratingTable" class="mb-5"></div>
 
     <!-- Form Tambah Rating -->
     <h6 class="text-center bg-secondary rounded-2 text-light py-2">
-      Tambah / Ubah Rating
+      <i class="fa-solid fa-pencil me-2"></i> Tambah / Ubah Rating
     </h6>
     <form id="ratingForm" class="d-flex mb-5">
       <input
@@ -103,14 +119,14 @@
         class="form-control form-control-sm"
         required
       />
-      <button type="submit" class="btn btn-secondary btn-sm">Proses</button>
+      <button type="submit" class="btn btn-primary btn-sm">Proses</button>
     </form>
 
     <hr class="mb-5" />
 
     <!-- Prediksi -->
     <h6 class="text-center bg-secondary rounded-2 text-light py-2">
-      Prediksi Rating
+      <i class="fa-solid fa-wand-magic-sparkles me-2"></i> Prediksi Rating
     </h6>
     <div class="d-flex">
       <select id="predictUser" class="form-select form-select-sm"></select>
@@ -120,7 +136,7 @@
         id="predictItem"
         placeholder="Nama Item"
       />
-      <button onclick="predictRating()" class="btn btn-secondary btn-sm">
+      <button onclick="predictRating()" class="btn btn-primary btn-sm">
         Prediksi
       </button>
     </div>
